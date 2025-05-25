@@ -1,6 +1,21 @@
 [package]
 name = "coagent"
 version = "0.1.0"
-edition = "2024"
+edition = "2021"
+description = "A Rust framework for building agent-based systems with Ractor"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+homepage = "https://github.com/daocuong/coagent"
+repository = "https://github.com/daocuong/coagent"
+keywords = ["agent", "actor", "ai", "concurrency", "framework"]
+categories = ["concurrency", "asynchronous"]
 
 [dependencies]
+ractor = "0.10"
+tokio = { version = "1.40", features = ["full"] }
+uuid = { version = "1.10", features = ["v4"] }
+serde_json = "1.0"
+async-trait = "0.1"
+
+[package.metadata]
+include = ["**/*.rs", "Cargo.toml", "README.md"]
